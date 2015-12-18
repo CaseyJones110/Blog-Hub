@@ -1,0 +1,8 @@
+<form action="<%= artists_path %>" method="POST">
+  <input type="hidden" name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <label for="artist">Type an Artist</label>
+  <input type="text" name="artist[name]" value="<%= @artist.name %>">
+  <input type="submit" value="Search">
+</form>
+</br>

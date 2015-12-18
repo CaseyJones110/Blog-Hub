@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     render '/greet'
   end
 
+  def require_current_user
+    redirect_to root_path unless current_user
+  end
+
   private
 
   def current_user

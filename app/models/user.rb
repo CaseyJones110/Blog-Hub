@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   validates :password, length: {
     minimum: 6, allow_nill: true
   }
+
+  has_many :artists
 end

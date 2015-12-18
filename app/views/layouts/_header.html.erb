@@ -1,0 +1,12 @@
+<header>
+  <a href="<%= root_path %>" class="logo">Blog Hub</a>
+  <% if current_user %>
+    <%= link_to "Archive an Artist", new_artist_path %>
+    <%= link_to "Your Artists", artists_path, method: :get %>
+    <%= link_to "Log out", session_path, method: :delete, class: 'logout' %>
+  <% else %>
+    <%= link_to "Search for articles", root_path %>
+    <%= link_to "Sign in", users_path %>
+  <% end %>
+</header>
+<hr/>
