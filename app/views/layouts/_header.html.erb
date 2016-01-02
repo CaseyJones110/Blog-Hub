@@ -1,6 +1,7 @@
 <header>
-  <a href="<%= root_path %>" class="logo">Blog Hub</a>
+  <h1 class="logo">Blog Hub</h1>
   <% if current_user %>
+    <a href="<%= root_path %>">Home</a>
     <%= link_to "Archive an Artist", new_artist_path %>
     <%= link_to "Your Artists", artists_path, method: :get %>
     <%= link_to "Log out", session_path, method: :delete, class: 'logout' %>

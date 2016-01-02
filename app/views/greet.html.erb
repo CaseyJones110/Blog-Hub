@@ -1,9 +1,16 @@
 <h1>Want to keep up with your favorite Artists?</h1>
 <h2>Now you can!</h2>
 
-<form>
-  <label for="artist">Type an Artist</label>
-  <input type="text" id="artist">
-  <input type="submit" value="Search">
-</form>
-</br>
+<div ng-controller="APIController as ctrl">
+  <form>
+    <label for="artist">Type an Artist</label>
+    <input type="text" ng-model="ctrl.searchParams" id="artist">
+    <input type="submit" ng-click="ctrl.makeCall()" value="Search">
+  </form>
+  </br>
+  <div class="response" ng-repeat="d in data.response.blogs">
+    <h3>{{ d.name }}</h3>
+    <h4>{{ d.date_posted | date  }}</h4>
+    <p>{{ d.summary }}</p>
+  </div>
+</div>
