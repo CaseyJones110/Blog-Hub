@@ -9,8 +9,8 @@
   </form>
   </br>
   <div class="response" ng-repeat="d in data.response.blogs">
-    <h3>{{ d.name }}</h3>
-    <h4>{{ d.date_posted | date  }}</h4>
-    <p>{{ d.summary }}</p>
+    <h3 ng-bind="d.name"></h3>
+    <h4 ng-bind="d.date_posted | date"></h4>
+    <p ng-bind="d.summary"></p>
   </div>
 </div>
